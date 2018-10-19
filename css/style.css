@@ -101,8 +101,6 @@ body {
     justify-content: space-around;
 }
 
-.main-menu li {}
-
 .main-menu a {
     font-weight: 700;
     font-size: 2rem;
@@ -111,9 +109,92 @@ body {
     text-shadow: 1px 1px 3px #aaa, 2px 2px 3px #aaa, 3px 3px 3px #aaa;
 }
 
+
+/* 메인 콘텐츠 */
+
 .content {
-    background: transparent;
-    min-height: 1000px
+    background: skyblue;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* 애니메이션 */
+
+.text-effect {
+    background: #333 url("images/animation-bg.jpg") no-repeat 50% 50% /cover fixed;
+    width: 1000px;
+    position: relative;
+}
+
+.text-frame {
+    font-weight: 700;
+    /* font-size: 60px; */
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: blue;
+    transform: translate(-50%, -50%);
+}
+
+.frame1 {
+    animation: textSize 3s forwards alternate ease-in-out
+}
+
+.frame2 {
+    opacity: 0;
+    animation: textSpin 3s backwards 3s ease-in-out
+}
+
+@keyframes textSize {
+    0% {
+        font-size: 16px
+    }
+    90% {
+        font-size: 60px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes textSpin {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+    100 {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+
+/* 새소식 */
+
+.news {
+    background: pink;
+    width: 400px;
+}
+
+
+/* 추천영상 */
+
+.media {
+    background: lime;
+    width: 600px;
+}
+
+
+/* 인기사이트 */
+
+.favorite {
+    background: orange;
+    width: 1000px;
 }
 
 .footer {
