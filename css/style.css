@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -203,6 +204,12 @@ body {
     }
 }
 
+.news,
+.media,
+.favorite {
+    padding: 20px;
+}
+
 
 /* 새소식 */
 
@@ -211,7 +218,22 @@ body {
     width: 400px;
 }
 
-
+.news-date {
+    display: block;
+    text-align: right;
+    margin: 1em 0;
+}
+.news-brief{
+    line-height: 1.5;
+    margin: 1em 0;
+}
+.news-thumnail{
+    text-align: center;
+}
+.news-thumnail img {
+width: 50%;
+height: auto;
+}
 /* 추천영상 */
 
 .media {
